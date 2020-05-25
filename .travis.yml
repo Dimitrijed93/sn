@@ -6,5 +6,5 @@ deploy:
     secure: dbfcef69-799d-42c9-bfe2-f18482f6e329
   app: d-sn
   on:
-    repo: github.com/Dimitrijed93/sn.git
+    repo: Dimitrijed93/sn
 
