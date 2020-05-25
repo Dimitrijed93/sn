@@ -3,7 +3,7 @@ language: go
 deploy:
   provider: heroku
   api_key:
-    secure: dbfcef69-799d-42c9-bfe2-f18482f6e329
+    secure: HEROKU_API_KEY
   app: d-sn
   on:
     repo: Dimitrijed93/sn
