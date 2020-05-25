@@ -1,7 +1,5 @@
 language: go
-branches:
-  only:
-    - master
+
 deploy:
   provider: heroku
   api_key:
