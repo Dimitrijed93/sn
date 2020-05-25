@@ -2,3 +2,6 @@ language: go
 branches:
   only:
     - master
+install:
+  make build
+
