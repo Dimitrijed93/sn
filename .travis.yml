@@ -2,6 +2,11 @@ language: go
 branches:
   only:
     - master
-install:
-  make build
+deploy:
+  provider: heroku
+  api_key:
+    secure: dbfcef69-799d-42c9-bfe2-f18482f6e329
+  app: d-sn
+  on:
+    repo: github.com/Dimitrijed93/sn.git
 
