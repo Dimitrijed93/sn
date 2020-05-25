@@ -6,7 +6,7 @@ import (
 )
 
 // ErrNoRecord CURD error string
-var ErrNoRecord = errors.New("models: no matching record found")
+var ErrNoRecord = errors.New("models: no matching record found ss")
 
 // Snippet model
 type Snippet struct {
