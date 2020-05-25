@@ -6,13 +6,21 @@ import (
 	"os"
 )
 
+type application struct {
+	errLog  *log.Logger
+	infoLog *log.Logger
+}
+
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", home)
-	mux.HandleFunc("/snippet", showSnippet)
-	mux.HandleFunc("/snippet/create", createSnippet)
-	fileServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
-	err := http.ListenAndServe(":"+os.Getenv("PORT"), mux)
+
+	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
+	errorLog := log.New(os.Stderr, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+
+	app := &application{
+		infoLog: infoLog,
+		errLog:  errorLog,
+	}
+
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), app.routes())
 	log.Fatal(err)
 }
