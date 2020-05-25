@@ -1,10 +1,8 @@
 language: go
-
 deploy:
   provider: heroku
   api_key:
-    secure: HEROKU_API_KEY
+    secure: WvdTsJz7DmF3pZCL3vhls9gMQk3w+CL3tvPRMAklJq+AArEihguNL+On7fZ7NJ1IdnBW8rruD9hHvn14+8+UckhKSLN2SB45VpsVx78qZcOkETyoh+/MyBzhyyHeFgJjrMTDnynqVy9qQbABp+U9Y8oBsE4it+EDfCsK/grycxc/8PgEVfSYZ+EjO8fpBhvSqWIzVkxRLoJgjW9fGrQjbj9L3KzR7/6T7Sy0MColoEPAEDl7caDDVfe/suISRDaw//9HtCV1oX1vl8P9//49YbVVJLlXq+hembgPdBVju2hwV+nhojspJUX/gWeHQmzKuV/uGfoFjnkKKo7T04nAewsIPhKR69rEHZw3wCa2/KYwUAkKRuyGJThP4LANhdVxURZHMbv+PEFiUzqdQH3UU2dMKxI/qLhW6LqtAPL4tkdN9Y2AxtMUltcNW1ml2AaZEbzo4r1rS4RQSo9m3xS9Q9dknxXGUnX9errQqiY8oCyzywT2FSYBVBb1ymAXT6HKd8MHnzqqnzOpjR6XyxjAUF4e+blG9PAJPNF0KCoWoLsUVqvirtCjpcPBwlDqWu7kQyNvzDva+EM61eG/IrdTyCk/wmy8WVbZ+QjuxeQElbPeF3o4/ehy5riUf4kn4xVaZZrornp58AW80tlBC94zh2TAtpWcrz4VDPURopSmhdk=
   app: d-sn
   on:
     repo: Dimitrijed93/sn
-
