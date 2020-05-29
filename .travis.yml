@@ -1,4 +1,7 @@
 language: go
+before_install: 
+  - go get github.com/bmizerany/pat
+  - go get github.com/justinas/alice
 deploy:
   provider: heroku
   api_key:
