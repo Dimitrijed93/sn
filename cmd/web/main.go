@@ -4,11 +4,14 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/Dimitried93/sn/pkg/models"
 )
 
 type application struct {
 	errLog  *log.Logger
 	infoLog *log.Logger
+	snippet models.SnippetModel
 }
 
 func main() {
@@ -21,6 +24,6 @@ func main() {
 		errLog:  errorLog,
 	}
 
-	err := http.ListenAndServe(":"+os.Getenv("PORT"), app.routes())
+	err := http.ListenAndServe(local, app.routes())
 	log.Fatal(err)
 }
