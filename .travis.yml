@@ -1,5 +1,6 @@
 language: go
 before_install: 
+  - export GO111MODULE="on" 
   - go get github.com/bmizerany/pat
   - go get github.com/justinas/alice
 deploy:
