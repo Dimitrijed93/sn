@@ -24,6 +24,6 @@ func main() {
 		errLog:  errorLog,
 	}
 
-	err := http.ListenAndServe(local, app.routes())
+	err := http.ListenAndServe(cloud, app.routes())
 	log.Fatal(err)
 }
